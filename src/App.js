@@ -113,8 +113,13 @@ function App() {
   }
 
   function PreviousGames() {
+    function handleClick(index) {
+      setMessage(`Round ${index + 1}`);
+      setBoard(snapshot[index]);
+    }
+
     const snapshotItems = snapshot.map((array, index) => 
-      <li onClick={() => setBoard(snapshot[index])} key={index} >Game {index + 1}</li>
+      <li onClick={() => handleClick(index)} key={index} >Game {index + 1}</li>
     )
 
     return (
