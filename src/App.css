@@ -1,38 +1,86 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#message {
+  height: 40px;
+}
+
+#gameboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin: 5%;
+}
+
+#players {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+#players > h1 {
+  margin: 0 20px;
+}
+
+#previous-games {
+  background-color: beige;
+  width: 300px;
+  height: 100px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+#previous-games > li {
+  cursor: pointer;
+  color: black;
+}
+
+#reset-btn {
+  margin: 10px;
+  padding: 5px;
+}
+
+.square {
+  padding: 32px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.x {
+  background-image: url('../public/x.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.o {
+  background-image: url('../public/o.svg');
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+}
+
+.active {
+  text-decoration: underline;
 }
